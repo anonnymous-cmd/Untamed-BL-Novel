@@ -1,0 +1,12 @@
+name: Build RenPy Game
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Ren'Py Project
+        uses: marketplace/actions/build-ren-py-based-visual-novel@v1
+        with:
+          sdk-version: '8.1.1'
+          project-dir: '.'
